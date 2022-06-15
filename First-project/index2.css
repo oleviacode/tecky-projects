@@ -1,0 +1,189 @@
+.outer-container {
+  display: flex;
+  width: 95%;
+}
+
+.container {
+  width: 80%;
+  height: 600px;
+  border: 1px solid black;
+  overflow: scroll;
+  padding: 0px;
+  border-radius: 20px;
+}
+
+.title {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.stats {
+  position: absolute;
+  background: white;
+  border: 5px solid black;
+  width: 200px;
+  height: 40px;
+  top: 580px;
+  right: 120px;
+  padding: 3px;
+
+  font-size: 0.8rem;
+  display: flex;
+  border-radius: 5px;
+}
+
+.stats div {
+  width: 50%;
+}
+
+.styles {
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.controls {
+  width: 20%;
+}
+
+.button {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.button span {
+  margin: 2px;
+  padding: 5px;
+  font-size: 1.5rem;
+  color: white;
+  border-radius: 5px;
+}
+
+#run {
+  background: black;
+}
+
+#reset-game {
+  background: slategray;
+}
+
+#random {
+  background: darkgray;
+}
+
+.rules {
+  display: flex;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.pause {
+  background: lavender;
+}
+
+.slide-box {
+  width: 200px;
+  height: 50px;
+  border: 1px solid black;
+  display: flex;
+  margin: 2%;
+  border-radius: 5px;
+}
+
+#styles {
+  margin-right: 5px;
+}
+
+.speed-icon {
+  width: 15%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.go {
+  background: black;
+  color: white;
+  margin: 0px 2px 0px 2px;
+  padding: 1px;
+  border-radius: 2px;
+}
+
+.toggle {
+  width: 200px;
+  height: 100%;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-button {
+  position: absolute;
+  padding: 10px;
+  background: pink;
+  border-radius: 10px;
+  left: -10px;
+  top: -8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-bar {
+  width: 80%;
+  height: 5px;
+  position: relative;
+  background: black;
+}
+
+@media (max-width: 700px) {
+  .outer-container {
+    flex-direction: column-reverse;
+  }
+  .container {
+    max-height: 400px;
+  }
+  .stats {
+    top: 380px;
+  }
+
+  .name-of-button {
+    margin-right: 5px;
+  }
+
+  .rule-container {
+    display: flex;
+  }
+
+  .controls {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slide-box {
+    height: 35px;
+  }
+
+  .button span {
+    margin: 5px;
+    padding: 5px;
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  .button {
+    justify-content: space-between;
+    flex-wrap: noWrap;
+  }
+}

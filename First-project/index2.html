@@ -1,0 +1,105 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="index2.css" />
+  </head>
+
+  <body>
+    <div class="outer-container">
+      <div class="col col-md-3 controls">
+        <div class="title"><h1>Game of Life</h1></div>
+        <div class="button">
+          <span id="run">Run</span><span id="reset-game">Reset</span
+          ><span class="pause">Pause</span><span id="random">Random</span>
+          <div class="slide-box">
+            <div class="speed-icon"><i class="fa-solid fa-gauge"></i></div>
+            <div class="toggle">
+              <div class="toggle-bar">
+                <div class="toggle-button"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rule-container">
+          <div class="rules">
+            <div class="name-of-button">If neighbours are less than:</div>
+            <div class="selection-button">
+              <select id="die-of-loneliness">
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="rules">
+            <div class="name-of-button">Overpopulation:</div>
+            <div class="selection-button">
+              <select id="die-of-overpopulation">
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="rules">
+            <div class="name-of-button">Reproduction:</div>
+            <div class="selection-button">
+              <select id="reproduction">
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="styles">
+          <div class="name-of-button">Style:</div>
+          <div class="selection-button">
+            <select id="styles">
+              <option value="default">--Choose--</option>
+              <option value="copperhead">Copperhead</option>
+              <option value="gosper">Gosper Glider Gun</option>
+              <option value="pulsar">Pulsar</option>
+            </select>
+          </div>
+          <span class="go" onclick="stylesChoose()">try</span>
+        </div>
+      </div>
+
+      <div class="col col-md-9 container">
+        <div class="stats">
+          <div>Alive: <span class="alive-number">0 </span></div>
+          <div>
+            Died:
+            <span class="died-number">0</span>
+          </div>
+        </div>
+        <div id="canvas"></div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.js"></script>
+    <script src="index2.js"></script>
+  </body>
+</html>
